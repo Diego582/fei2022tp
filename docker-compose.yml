@@ -16,6 +16,23 @@ services:
     networks:
       - red_ap
 
+ backend:
+    image: yiisoftware/yii2-php:7.1-apache
+    environment:
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASS}
+     
+    volumes:
+      - ./backend/composer/cache:/root/.composer/cache:delegated
+      - ./backend/basic:/app:delegated
+    
+    ports:
+    - ${PORTS_BACKEND}
+    networks:
+      - red_ap
+
 networks:
   red_ap:
      driver: bridge
