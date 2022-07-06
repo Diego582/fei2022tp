@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+
+ postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_PASSWORD: ${DATABASE_PASS}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_DB: ${DATABASE_NAME}
+    volumes:
+      - ./data/postgres:/var/postgresql/data:delegated
+    ports:
+    - ${PORTS_DB}
+    
+    networks:
+      - red_ap
+
+networks:
+  red_ap:
+     driver: bridge
