@@ -23,6 +23,7 @@ services:
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_USER: ${DATABASE_USER}
       DATABASE_PASSWORD: ${DATABASE_PASS}
+      PRODUCCION: ${ESTADO_PRODUCCION}
      
     volumes:
       - ./backend/composer/cache:/root/.composer/cache:delegated
