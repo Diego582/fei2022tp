@@ -24,6 +24,7 @@ services:
       DATABASE_USER: ${DATABASE_USER}
       DATABASE_PASSWORD: ${DATABASE_PASS}
       PRODUCCION: ${ESTADO_PRODUCCION}
+      PHP_USER_ID: ${USER_ID}
      
     volumes:
       - ./backend/composer/cache:/root/.composer/cache:delegated
