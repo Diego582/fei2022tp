@@ -35,6 +35,18 @@ services:
     networks:
       - red_ap
 
+ frontend:
+    build:
+      context: .
+      target: 'develop-stage'
+    ports:
+    - ${PORTS_FRONTEND}
+    volumes:
+    - './frontend:/app'
+    command: /bin/sh -c "npm run serve"
+    networks:
+      - red_ap
+
 networks:
   red_ap:
      driver: bridge
