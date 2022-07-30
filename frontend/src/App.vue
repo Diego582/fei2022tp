@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <MainMenu></MainMenu>
-    <MainBar></MainBar>
+    <MainBarMenu></MainBarMenu>
     <v-main>
       <router-view />
     </v-main>
@@ -9,14 +8,13 @@
 </template>
 
 <script>
-import MainBar from "./components/MainBar.vue";
-import MainMenu from "./components/MainMenu.vue";
+import MainBarMenu from "./components/MainBarMenu.vue";
 
 export default {
   name: "App",
   data: () => ({
     //
   }),
-  components: { MainBar, MainMenu },
+  components: { MainBarMenu },
 };
 </script>
