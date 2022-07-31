@@ -45,7 +45,7 @@ class Materia extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels()
+   /*  public function attributeLabels()
     {
         return [
             'id' => 'ID',
@@ -54,7 +54,7 @@ class Materia extends \yii\db\ActiveRecord
             'id_carrera' => 'Id Carrera',
             'id_profesor' => 'Id Profesor',
         ];
-    }
+    } */
 
     /**
      * Gets query for [[Carrera]].
