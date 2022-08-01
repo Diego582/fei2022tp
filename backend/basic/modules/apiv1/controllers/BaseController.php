@@ -15,7 +15,7 @@ class BaseController extends ActiveController
 {
     public static function allowedDomains()
     {
-        return [$_SERVER["REMOTE_ADDR"], 'http://127.0.0.1:8080'];
+        return [$_SERVER["REMOTE_ADDR"], $_ENV['IP_REMOTE']];
     }
 
 
