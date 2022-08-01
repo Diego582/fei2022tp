@@ -92,6 +92,17 @@ const routes = [
         /* webpackChunkName: "about" */ "../components/CalendarioReserva.vue"
       ),
   },
+  {
+    path: "/horariomateria",
+    name: "ListarHorarioMaterias",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/horariosmaterias/Crud-HorarioMateria.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
