@@ -84,7 +84,7 @@ export default {
         to: "/horariomateria",
       },
 
-      { title: "About", icon: "mdi-all-inclusive-box", to: "/about" },
+      { title: "Calendario", icon: "mdi-calendar-month", to: "/calendario" },
     ],
   }),
   watch: {
