@@ -3,8 +3,6 @@
 namespace app\modules\apiv1\controllers;
 
 use yii\rest\ActiveController;
-use yii\web\Response;
-use yii\filters\ContentNegotiator;
 use yii\filters\Cors;
 
 class BaseController extends ActiveController
